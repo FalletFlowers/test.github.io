@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TAKE QUIZ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
+</head>
+
+<style>
+
+    body {
+      background: url("covid-19-support.jpeg") no-repeat center center fixed;
+      background-size: cover;
+    }
+  </style>
+<body>
+
+    <header class="header flex">
+        <img src="" alt="" class="logo">
+        <nav>
+          <ul id="main-nav" class="main-nav flex">
+            <li>
+              <a href="index.html">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <div class="dropdown">
+                <a href="#" class="dropdown-quiz">Program</a>
+                <div class="drop-content">
+                  <a href="takeQuiz.html">Take Quiz</a>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a href="covidGallery.html" >
+                  Gallery
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+    </header>
+    <hr>
+
+    <div class="quizPage">
+        <div class="startButton">
+          <h1 class="instructionLabel" id="instructionLabel">Click Start Quiz Button to begin</h1>
+          <button class="displayInstructions" id="startButton">Start Quiz <span><i class="fa fa-paper-plane" aria-hidden="true"></i></span></button>
+        </div>
+
+        <div class="preQuizInstructions" id="preQuizInstructions">
+            <div class="quizInstructionsHeader flex" id="quizInstructionsHeader">QUIZ INSTRUCTIONS</div>
+            <div class="quizInstructionsBody">
+                <div class="firstInstruction">1. This Quiz consists of 10 multiple choice questions</div>
+                <div class="instruction">2. Each question will appear on a separate page</div>
+                <div class="instruction">3. Read each question carefully and select an answer</div>
+                <div class="instruction">4. Click on Next to advance to the next question</div>
+                <div class="instruction">5. Click on Previous to go back to the previous question</div>
+                <div class="instruction">6. You are allowed to skip an answer and move on</div>
+                <div class="instruction">7. You are allowed to go back and change your answer</div>
+                <div class="instruction">8. On the last slide click on Submit Quiz</div>
+                <div class="instruction">9. You will be provided with your results</div>
+            </div>
+            <div class="quizInstructionsFooter">
+                <button class="beginQuizBtn" id="beginQuizBtn">Begin Quiz <span><i class="fa fa-check-square-o" aria-hidden="true"></i></span></button>
+                <button class="quitQuizBtn" id="quitQuizResultsBtn">Quit <span><i class="fa fa-times" aria-hidden="true"></i></span> </button>
+            </div>
+        </div>
+
+        <div id="quizSection" class="quizSection">
+
+            <div class="quizHeader flex">COVID-19 QUIZ</div>
+
+            <div id="quizBody" class="quizBody"></div>
+
+            <!-- Footer-->
+            <div class="quizFooter flex">
+
+                <button id="previousQuestionBtn" class="previousQuestion"><span><i class="fa fa-arrow-left" aria-hidden="true"></i></span> Back</button>
+
+                <button id="nextQuestionBtn" class="nextQuestion">Next <span><i class="fa fa-arrow-right" aria-hidden="true"></i></span></button>
+                <button id="submitQuiz" class="submitQuiz">Submit Quiz <span><i class="fa fa-paper-plane" aria-hidden="true"></i></span></button>
+                <button class="backToResults" id="viewResultsAgain">Back to Results <span><i class="fa fa-clipboard" aria-hidden="true"></i></span></button>
+            </div>
+        </div>
+
+        <p></p>
+
+        <div class="resultsPage" id="resultsPage">
+            <div class="imageSection">
+                <img class="imageResult" src="completion.png" alt="Completed">
+            </div>
+            <div class="congratsMessage">Congratulations! You have completed the quiz</div>
+            <div class="scoreResult">Your Score: <span class="scoreResultText" id="scoreResultText"></span></div>
+            <div class="scoreGrade">Your Grade: <span class="scoreResultText" id="scoreGradeText"></span></div>
+            <div class="restartQuit">
+                <button class="restartQuizBtn" id="restartQuizBtn">Restart <span><i class="fa fa-repeat" aria-hidden="true"></i></span></button>
+                <button class="viewResultsBtn" id="viewResultsBtn">View Results <span><i class="fa fa-clipboard" aria-hidden="true"></i></span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
